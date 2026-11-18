@@ -31,8 +31,8 @@ In testing:
 ## Documentation
 
 - Open full documentation here:
-  - [Documentation Portal](https://bbagy.github.io/UhlemannLab/)
-  - [Docker & Apptainer guide](https://bbagy.github.io/UhlemannLab/containers.html)
+  - [Documentation Portal](https://uhlemannlab.github.io/UhlemannLab/)
+  - [Docker & Apptainer guide](https://uhlemannlab.github.io/UhlemannLab/containers.html)
   - (Read the Docs URL will be added after first successful RTD build)
 
 The portal serves the static HTML in `docs/`. GitHub Pages must be configured
