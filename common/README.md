@@ -78,7 +78,7 @@ Prepare the code on HPC as well. For a first-time setup:
 
 ```bash
 # Run on HPC.
-git clone https://github.com/bbagy/UhlemannLab.git
+git clone https://github.com/UhlemannLab/UhlemannLab.git
 cd UhlemannLab
 ```
 
