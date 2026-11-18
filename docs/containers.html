@@ -25,7 +25,7 @@
         <a href="tnseq_ont.html">TnSeq_ONT</a>
       </nav>
       <div class="sidebar-foot">
-        <a class="repo-link" href="https://github.com/bbagy/UhlemannLab" target="_blank" rel="noopener noreferrer">Open bbagy GitHub</a>
+        <a class="repo-link" href="https://github.com/UhlemannLab/UhlemannLab" target="_blank" rel="noopener noreferrer">Open UhlemannLab GitHub</a>
       </div>
     </aside>
     <main class="main">
@@ -60,7 +60,7 @@ bash shortWGS/Go_shortWGS.sh --container apptainer \
       image options also work; longWGS uses <code>--container-image</code> because it has no image <code>-m</code> option.</p>
       <p>This applies to longWGS, shortWGS, RNake, PFsnake, KBracken, Humann, and all three MAGs stages.
       daDake2 and merge/rename utilities keep their host execution. TnSeq_ONT has a Python entry point;
-      see its <a href="https://github.com/bbagy/UhlemannLab/blob/main/TnSeq_ONT/README.md#apptainer-on-hpc">direct Apptainer example</a>.</p>
+      see its <a href="https://github.com/UhlemannLab/UhlemannLab/blob/main/TnSeq_ONT/README.md#apptainer-on-hpc">direct Apptainer example</a>.</p>
 
       <h2>Move an existing Docker image to HPC</h2>
       <div class="flow" aria-label="Docker to HPC image transfer">
@@ -119,7 +119,7 @@ rsync -avP container-images/shortwgs.docker.tar \
       <p><code>rsync -avP</code> shows progress and retains partial files for interrupted transfers.
       Prepare the code on HPC too:</p>
 <div class="card"><pre><code># On HPC: first-time checkout.
-git clone https://github.com/bbagy/UhlemannLab.git
+git clone https://github.com/UhlemannLab/UhlemannLab.git
 cd UhlemannLab
 
 # For an existing checkout, check local changes before updating.
@@ -168,8 +168,8 @@ bash ~/UhlemannLab/shortWGS/Go_shortWGS.sh \
         </ul>
         <p>These instructions and launch options are available. Images still need to be created and validated on your target HPC.</p>
       </div>
-      <p><a href="https://github.com/bbagy/UhlemannLab/blob/main/common/README.md">Repository image guide</a> ·
-      <a href="https://github.com/bbagy/UhlemannLab/blob/main/common/Go_container_image.sh">Export/build helper</a> ·
+      <p><a href="https://github.com/UhlemannLab/UhlemannLab/blob/main/common/README.md">Repository image guide</a> ·
+      <a href="https://github.com/UhlemannLab/UhlemannLab/blob/main/common/Go_container_image.sh">Export/build helper</a> ·
       <a href="https://apptainer.org/docs/user/main/docker_and_oci.html#containers-in-docker-archive-files">Official Apptainer conversion documentation</a></p>
     </main>
   </div>
