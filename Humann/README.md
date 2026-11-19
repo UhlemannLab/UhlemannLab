@@ -26,7 +26,7 @@ flowchart LR
   C --> D[MetaPhlAn4 bug list extraction]
   C --> E[merge_genefamilies / pathabundance / pathcoverage]
   E --> F[Gene-family normalization CPM]
-  F --> G[Regroup to UniRef90_rxn]
+  F --> G[Regroup to KO]
   G --> H[Optional MUSiCC correction]
   H --> I[Rename to KEGG orthology]
   I --> J[Stratified / unstratified split]
@@ -110,6 +110,7 @@ Go_Humann.sh \
 | `-p` | - | HUMAnN3 protein DB (`uniref`) |
 | `-b` | - | MetaPhlAn4 DB directory (or `.pkl` for legacy shortcut) |
 | `-I` / `--metaphlan-index` | - | MetaPhlAn4 index basename (without `.pkl`) |
+| `-u` | `/media/uhlemann/core4/DB/utility_mapping` | Utility mapping DB directory for UniRef90/50 → KO (`map_ko_uniref90.txt.gz`) |
 | `-s` | script directory | Optional Snakefile directory override |
 | `-c` | `8` | Snakemake cores |
 | `-j` | `4` | Snakemake jobs |
@@ -163,12 +164,12 @@ OUT/
     <sample>_metaphlan_bugs_list.tsv
   4_kegg-orthology/
     merged_genefamilies_cpm.txt
-    merged_genefamilies_uniref90_rxn_cpm.txt
-    merged_genefamilies_uniref90_rxn_musicc.txt
-    merged_genefamilies_uniref90_rxn_kegg-orthology_cpm.txt
+    merged_genefamilies_uniref90_ko_cpm.txt
+    merged_genefamilies_uniref90_ko_musicc.txt
+    merged_genefamilies_uniref90_ko_kegg-orthology_cpm.txt
     stratified_out/
-      merged_genefamilies_uniref90_rxn_kegg-orthology_cpm_unstratified.txt
-      merged_genefamilies_uniref90_rxn_kegg-orthology_cpm_unstratified_filtered.txt
+      merged_genefamilies_uniref90_ko_kegg-orthology_cpm_unstratified.txt
+      merged_genefamilies_uniref90_ko_kegg-orthology_cpm_unstratified_filtered.txt
   5_pathabundance_stratified_out/
     merged_pathabundance_unstratified.txt
   6_logs/
@@ -184,7 +185,7 @@ Key files:
 - `2_humann3_final_out/merged_genefamilies.txt`
 - `2_humann3_final_out/merged_pathabundance.txt`
 - `3_MetaPhlAn_bug_list/<sample>_metaphlan_bugs_list.tsv`
-- `4_kegg-orthology/merged_genefamilies_uniref90_rxn_kegg-orthology_cpm.txt`
+- `4_kegg-orthology/merged_genefamilies_uniref90_ko_kegg-orthology_cpm.txt`
 - `humann3_log.txt`
 
 ## Direct Snakemake Run (no wrapper)
